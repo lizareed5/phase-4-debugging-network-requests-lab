@@ -62,12 +62,12 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: i went into the network tab when i added a new toy and found the uninitialized constants Toys in the ToyController. it needs to just be Toy.create, not Toys.create
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: liked the toy, found the error => said there wasn't json. went to the controller and added render json: toy, status: :accepted
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: went to delete, went to network tab, no route for delete. changed routes to include all resources
